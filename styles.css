@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #2db300; /* Initial background color */
+    animation: colorShift 5s infinite alternate; /* Animation for color shifting */
+}
+
+@keyframes colorShift {
+    0% { background-color: #1b8f00; } /* Darker Green */
+    50% { background-color: #2db300; } /* Middle Green */
+    100% { background-color: #5cdf00; } /* Lighter Green */
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.game-button {
+    display: block;
+    text-align: center;
+    margin: 10px;
+    padding: 20px;
+    width: 150px; /* Adjust width as needed */
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.game-button img {
+    width: 100px; /* Image size */
+    height: 100px; /* Image size */
+    border-radius: 5px;
+}
+
+.game-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
