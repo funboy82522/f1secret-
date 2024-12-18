@@ -23,7 +23,7 @@ body {
     margin: 10px;
     overflow: hidden;
     width: 200px; /* Specify a fixed width for the buttons */
-    height: 150px; /* Specify a height */
+    height: 200px; /* Specify a height */
     text-align: center;
     text-decoration: none;
     border-radius: 8px; /* Rounded corners */
