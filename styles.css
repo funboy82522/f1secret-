@@ -1,63 +1,59 @@
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #2db300; /* Initial background color */
-    animation: colorShift 5s infinite alternate; /* Animation for color shifting */
+    margin: 0;
+    padding: 0;
 }
 
-@keyframes colorShift {
-    0% { background-color: #1b8f00; } /* Darker Green */
-    50% { background-color: #2db300; } /* Middle Green */
-    100% { background-color: #5cdf00; } /* Lighter Green */
-}
-
-header {
+.header {
     text-align: center;
     padding: 20px;
-    color: white;
-}
-
-h1 {
-    font-size: 2.5em;
+    background-color: #f2f2f2;
 }
 
 .button-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 20px;
+    margin-top: 20px;
 }
 
 .game-button {
+    position: relative;
     display: block;
-    text-align: center;
     margin: 10px;
-    padding: 20px;
-    width: 150px; /* Adjust width as needed */
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
+    overflow: hidden;
+    width: 200px; /* Specify a fixed width for the buttons */
+    height: 150px; /* Specify a height */
+    text-align: center;
+    color: white; /* Text color for the title */
     text-decoration: none;
-    color: black;
-    transition: transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px; /* Rounded corners */
+    transition: transform 0.3s; /* Smooth transition */
 }
 
 .game-button img {
-    width: 150px; /* Image size */
-    height: 150px; /* Image size */
-    border-radius: 5px;
+    width: 100%; /* Stretch the image to full width */
+    height: 100%; /* Stretch the image to full height */
+    object-fit: cover; /* Maintain aspect ratio */
 }
 
 .game-button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
-footer {
-    text-align: center;
-    padding: 10px;
-    color: white;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+.game-button span {
+    position: absolute;
+    bottom: -30px; /* Move the title down initially */
+    left: 50%;
+    transform: translateX(-50%); /* Center the text */
+    background: rgba(0, 0, 0, 0.7); /* Background for the title */
+    padding: 5px 10px;
+    border-radius: 5px;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s, bottom 0.3s; /* Smooth appearance transition */
+}
+
+.game-button:hover span {
+    opacity: 1; /* Show the title on hover */
+    bottom: 10px; /* Move it above the original position */
 }
