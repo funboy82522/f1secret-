@@ -43,8 +43,8 @@ h1 {
 }
 
 .game-button img {
-    width: 100px; /* Image size */
-    height: 100px; /* Image size */
+    width: 150px; /* Image size */
+    height: 150px; /* Image size */
     border-radius: 5px;
 }
 
