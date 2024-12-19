@@ -5,15 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cool Games Website</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        function openGame(event, url) {
+            event.preventDefault();  // Prevent default anchor behavior
+            window.open(url, '_blank');  // Open the game link in a new tab
+            window.open('about:blank', '_blank');  // Open a blank page
+        }
+
+        function searchGames() {
+            const input = document.getElementById('searchBar').value.toLowerCase(); // Get the input value
+            const gameCards = document.querySelectorAll('.game-card'); // Get all game cards
+
+            gameCards.forEach(card => {
+                const title = card.querySelector('.button-title').textContent.toLowerCase(); // Get the title of the game
+                if (title.includes(input)) {
+                    card.style.display = ''; // Show the game card
+                } else {
+                    card.style.display = 'none'; // Hide the game card
+                }
+            });
+        }
+    </script>
 </head>
 <body>
     <header>
         <h1>Cool Games Website</h1>
     </header>
     <main>
-        <div class="game-card"><a href="about:blank" class="game-button" target="_blank"><img src="minecraft.jpg" alt="Minecraft"><span class="button-title">Minecraft 1.52</span></a></div>
-        <div class="game-card"><a href="about:blank" class="game-button" target="_blank"><img src="Retrobowl.jpg" alt="Retrobowl"><span class="button-title">Retro Bowl</span></a></div>
-        <div class="game-card"><a href="about:blank" class="game-button" target="_blank"><img src="1v1.lol.jpeg" alt="1v1.lol"><span class="button-title">1v1.lol</span></a></div>
+        <input type="text" id="searchBar" onkeyup="searchGames()" placeholder="Search for games...">
+        <div class="game-card"><a href="#" class="game-button" onclick="openGame(event, 'https://tylerpalko.github.io/gamehub/minecraft1.5.2/')"><img src="minecraft.jpg" alt="Minecraft"><span class="button-title">Minecraft 1.52</span></a></div>
+        <div class="game-card"><a href="#" class="game-button" onclick="openGame(event, 'https://tylerpalko.github.io/gamehub/retrobowl/')"><img src="Retrobowl.jpg" alt="Retrobowl"><span class="button-title">Retro Bowl</span></a></div>
+        <div class="game-card"><a href="#" class="game-button" onclick="openGame(event, 'https://1v1.lol/')"><img src="1v1.lol.jpeg" alt="1v1.lol"><span class="button-title">1v1.lol</span></a></div>
     </main>
 </body>
 </html>
