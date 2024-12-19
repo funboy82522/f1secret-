@@ -28,10 +28,14 @@ main {
     font-size: 16px;
 }
 
+.game-list {
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: center; /* Center items */
+    flex-wrap: wrap; /* Allow wrapping if necessary */
+}
+
 .game-card {
     margin: 10px;
-    display: inline-block;
-    text-align: center;
 }
 
 .game-button {
