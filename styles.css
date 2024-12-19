@@ -22,8 +22,8 @@ body {
     display: block;
     margin: 10px;
     overflow: hidden;
-    width: 200px; /* Specify a fixed width for the buttons */
-    height: 200px; /* Specify a height */
+    width: 190px; /* Specify a fixed width for the buttons */
+    height: 190px; /* Specify a height */
     text-align: center;
     text-decoration: none;
     border-radius: 8px; /* Rounded corners */
