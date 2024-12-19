@@ -4,28 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cool Games Website</title>
-    <link rel="stylesheet" href="styles.css">
-    <script>
-        function openGame(event, url) {
-            event.preventDefault();  // Prevent default anchor behavior
-            window.open(url, '_blank');  // Open the game link in a new tab
-            window.open('about:blank', '_blank');  // Open a blank page
-        }
-
-        function searchGames() {
-            const input = document.getElementById('searchBar').value.toLowerCase(); // Get the input value
-            const gameCards = document.querySelectorAll('.game-card'); // Get all game cards
-
-            gameCards.forEach(card => {
-                const title = card.querySelector('.button-title').textContent.toLowerCase(); // Get the title of the game
-                if (title.includes(input)) {
-                    card.style.display = ''; // Show the game card
-                } else {
-                    card.style.display = 'none'; // Hide the game card
-                }
-            });
-        }
-    </script>
+    <link rel="stylesheet" href="styles.css">  <!-- Link to external CSS -->
+    <script src="script.js" defer></script>  <!-- Link to external JS -->
 </head>
 <body>
     <header>
