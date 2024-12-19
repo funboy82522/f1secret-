@@ -20,7 +20,7 @@ main {
 }
 
 #searchBar {
-    width: 300px; /* Thinner width */
+    width: 300px; 
     padding: 8px;
     margin-bottom: 20px;
     border: 2px solid #ccc;
@@ -29,9 +29,9 @@ main {
 }
 
 .game-list {
-    display: flex; /* Use flexbox for horizontal layout */
-    justify-content: center; /* Center items */
-    flex-wrap: wrap; /* Allow wrapping if necessary */
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap; 
 }
 
 .game-card {
@@ -53,8 +53,8 @@ main {
 }
 
 img {
-    width: 150px; /* Adjust based on your image sizes */
-    height: 100px; /* Maintain aspect ratio for the images */
+    width: 150px; 
+    height: 100px; 
 }
 
 .button-title {
