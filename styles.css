@@ -1,72 +1,71 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #282c34;
-    color: #ffffff;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+    background-color: #f5f5f5;
+    color: #333;
 }
 
 header {
-    margin-bottom: 20px;
+    text-align: center;
+    padding: 20px;
+    background: #4CAF50;
+    color: white;
 }
 
 h1 {
-    color: #61dafb;
+    margin: 0;
 }
 
-.game-container {
+main {
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 20px;
+    padding: 20px;
 }
 
 .game-card {
     position: relative;
-    width: 150px;
-    text-align: center;
-}
-
-img {
-    width: 100%;
-    border-radius: 10px;
+    overflow: hidden;
+    width: 200px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .game-button {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #61dafb;
-    color: #282c34;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    position: relative;
+    display: block;
 }
 
-.game-button:hover {
-    background-color: #4fa3c7;
+.game-button img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s ease;
 }
 
-.game-title {
-    opacity: 0;
+.game-button:hover img {
+    transform: scale(1.05);
+}
+
+.button-title {
+    display: none;
     position: absolute;
-    bottom: 50px;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #FFD700;
     font-weight: bold;
-    transition: opacity 0.3s, color 0.5s;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    transition: opacity 0.3s ease;
 }
 
-.game-card:hover .game-title {
+.game-button:hover .button-title {
+    display: block;
     opacity: 1;
-    color: #ff6347; /* Tomato color */
-}
-
-/* Responsive design */
-@media screen and (max-width: 600px) {
-    .game-container {
-        flex-direction: column;
-    }
 }
