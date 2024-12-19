@@ -1,71 +1,72 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: #282c34;
+    color: #ffffff;
     margin: 0;
-    padding: 0;
-    background-color: #008080;
-}
-
-.header {
-    text-align: center;
-    padding: 20px;
-    background-color: #f2f2f2;
-    animation: myfirst 8s linear 0s infinite alternate; /* this will make it so the text is rainbow */
-}
-
-.button-container {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 20px;
+    height: 100vh;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #61dafb;
+}
+
+.game-container {
+    display: flex;
+    gap: 20px;
+}
+
+.game-card {
+    position: relative;
+    width: 150px;
+    text-align: center;
+}
+
+img {
+    width: 100%;
+    border-radius: 10px;
 }
 
 .game-button {
-    position: relative;
-    display: block;
-    margin: 10px;
-    overflow: hidden;
-    width: 190px; /* Specify a fixed width for the buttons */
-    height: 190px; /* Specify a height */
-    text-align: center;
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #61dafb;
+    color: #282c34;
     text-decoration: none;
-    border-radius: 8px; /* Rounded corners */
-    transition: transform 0.3s; /* Smooth transition */
-}
-
-.game-button img {
-    width: 100%; /* Stretch the image to full width */
-    height: 100%; /* Stretch the image to full height */
-    object-fit: cover; /* Maintain aspect ratio */
-}
-
-.title {
-    position: absolute;
-    bottom: -30px; /* Start hidden */
-    left: 50%;
-    transform: translateX(-50%); /* Center the title */
-    background: rgba(0, 0, 0, 0.7); /* Background for the title */
-    padding: 5px 10px;
     border-radius: 5px;
-    transition: bottom 0.3s; /* Smoothly move the title */
-    position: relative;
+    transition: background-color 0.3s;
 }
 
-.game-button:hover .title {
-    bottom: 10px; /* Show the title on hover */
+.game-button:hover {
+    background-color: #4fa3c7;
 }
 
-.game-button:hover img {
-    transform: scale(1.08); /* Zoom in on image for emphasis */
+.game-title {
+    opacity: 0;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+    transition: opacity 0.3s, color 0.5s;
 }
 
-.game-button:not(:hover) .title {
-    display: none; /* Hide title when not hovering */
+.game-card:hover .game-title {
+    opacity: 1;
+    color: #ff6347; /* Tomato color */
 }
 
-@keyframes myfirst {
- 0%   {background-color:red;}
- 25%  {background-color:yellow;}
- 50%  {background-color:blue;}
- 75%  {background-color:green;}
- 100% {background-color:red;}
+/* Responsive design */
+@media screen and (max-width: 600px) {
+    .game-container {
+        flex-direction: column;
+    }
 }
