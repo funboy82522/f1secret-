@@ -3,23 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cool Games Website</title>
-    <link rel="stylesheet" href="styles.css">  <!-- Link to external CSS -->
-    <script src="script.js" defer></script>  <!-- Link to external JS -->
+    <title>Game Links</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the CSS file -->
 </head>
 <body>
-    <header>
-        <h1 class="rainbow-text">Cool Games Website</h1>
-    </header>
-    <main>
-        <input type="text" id="searchBar" onkeyup="searchGames()" placeholder="Search for games...">
-        <div class="game-list">
-        <div class="game-card"><a href="#" class="game-button" onclick="openGame(event, 'https://tylerpalko.github.io/gamehub/minecraft1.5.2/')"><img src="minecraft.jpg" alt="Minecraft"><span class="button-title">Minecraft 1.52</span></a></div>
-        <div class="game-card"><a href="#" class="game-button" onclick="openGame(event, 'https://tylerpalko.github.io/gamehub/retrobowl/')"><img src="Retrobowl.jpg" alt="Retrobowl"><span class="button-title">Retro Bowl</span></a></div>
-        <div class="game-card"><a href="#" class="game-button" onclick="openGame(event, 'https://1v1.lol/')"><img src="1v1.lol.jpeg" alt="1v1.lol"><span class="button-title">1v1.lol</span></a></div>
-        <div class="game-card"><a href="#" class="game-button" onclick="openGame(event, 'https://ad-freegames.github.io/minijuegos/stickman-hook.html')"><img src="StickmanHook.jpg" alt="Stickman Hook"><span class="button-title">Stickman Hook</span></a></div>
-        <div class="game-card"><a href="#" class="game-button" onclick="openGame(event, 'https://tylerpalko.github.io/gamehub/cookieclicker/')"><img src="CookieClicker.png" alt="Cookie Clicker"><span class="button-title">Cookie Clicker</span></a></div>
-        </div>
-    </main>
+
+<header>
+    <h1 class="rainbow-text">Welcome to Game Links!</h1>
+    <input type="text" id="searchBar" placeholder="Search for a game...">
+</header>
+
+<section class="game-list">
+    <div class="game-card">
+        <a href="https://example.com/game1" class="game-button">
+            <img src="https://via.placeholder.com/150" alt="Game 1">
+            <span class="button-title">Game 1</span>
+        </a>
+    </div>
+    <div class="game-card">
+        <a href="https://example.com/game2" class="game-button">
+            <img src="https://via.placeholder.com/150" alt="Game 2">
+            <span class="button-title">Game 2</span>
+        </a>
+    </div>
+    <div class="game-card">
+        <a href="https://example.com/game3" class="game-button">
+            <img src="https://via.placeholder.com/150" alt="Game 3">
+            <span class="button-title">Game 3</span>
+        </a>
+    </div>
+    <!-- Add more game cards as needed -->
+</section>
+
+<script src="script.js"></script> <!-- Link to the JavaScript file -->
 </body>
 </html>
