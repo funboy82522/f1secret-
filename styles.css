@@ -14,6 +14,14 @@ header {
     padding: 10px 0;
 }
 
+.rainbow-text {
+    background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+    -webkit-background-clip: text; /* For Chrome/Safari */
+    -webkit-text-fill-color: transparent; /* For Chrome/Safari */
+    font-size: 2.5rem; /* Increase font size for better visibility */
+    margin: 0; /* Remove default margin */
+}
+
 main {
     padding: 20px;
     text-align: center;
@@ -36,6 +44,7 @@ main {
 
 .game-card {
     margin: 10px;
+    width: 150px; /* Set a fixed width for better layout */
 }
 
 .game-button {
@@ -46,6 +55,7 @@ main {
     overflow: hidden;
     background-color: #fff;
     transition: background-color 0.3s;
+    position: relative; /* Allows for easy overlay positioning */
 }
 
 .game-button:hover {
@@ -53,12 +63,13 @@ main {
 }
 
 img {
-    width: 150px; 
-    height: 100px; 
+    width: 100%; /* Makes the image fill the button */
+    height: auto; /* Keeps aspect ratio */
 }
 
 .button-title {
     padding: 10px;
     display: block;
     color: #333;
+    text-align: center; /* Centers text under the image */
 }
