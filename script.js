@@ -1,23 +1,23 @@
 // script.js
 
 function openGame(event, url) {
-    event.preventDefault();  // Prevent default anchor behavior
-    window.open(url, '_blank');  // Open the game link in a new tab
+    event.preventDefault(); 
+    window.open(url, '_blank');  
     setTimeout(() => {
-        window.open('about:blank', '_blank');  // Open a blank page
-    }, 100);  // Small delay to ensure the previous action executes
+        window.open('about:blank', '_blank');  
+    }, 100);  
 }
 
 function searchGames() {
-    const input = document.getElementById('searchBar').value.toLowerCase(); // Get the input value
-    const gameCards = document.querySelectorAll('.game-card'); // Get all game cards
+    const input = document.getElementById('searchBar').value.toLowerCase(); 
+    const gameCards = document.querySelectorAll('.game-card'); 
 
     gameCards.forEach(card => {
-        const title = card.querySelector('.button-title').textContent.toLowerCase(); // Get the title of the game
+        const title = card.querySelector('.button-title').textContent.toLowerCase(); 
         if (title.includes(input)) {
-            card.style.display = ''; // Show the game card
+            card.style.display = ''; 
         } else {
-            card.style.display = 'none'; // Hide the game card
+            card.style.display = 'none'; 
         }
     });
 }
