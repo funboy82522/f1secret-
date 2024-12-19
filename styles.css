@@ -31,8 +31,8 @@ body {
 }
 
 .game-button img {
-    width: 100%; /* Stretch the image to full width */
-    height: 100%; /* Stretch the image to full height */
+    width: 90%; /* Stretch the image to full width */
+    height: 90%; /* Stretch the image to full height */
     object-fit: cover; /* Maintain aspect ratio */
 }
 
